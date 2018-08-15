@@ -1,0 +1,7 @@
+<%(1..20).each do |row|%>
+	<tr>
+		<%(1..20).each do |column|%>
+			<td class="grids" onclick="$(this).toggleClass('grid-selected')" data-row="<%=row%>" data-col="<%=column%>" <%=raw grid_colors(row, column)%> ></td>
+		<% end %>
+	</tr>
+<% end %>
