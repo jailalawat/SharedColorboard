@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
-  root to: 'dashboard#index'
-  resources :dashboard, only: [] do
+  root to: 'palettes#index'
+
+  resources :palettes, only: [:index, :create] do
   	collection do
-  		post :apply_color
   		get :refresh_grid
   	end
   end 

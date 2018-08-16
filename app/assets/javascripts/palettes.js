@@ -14,7 +14,7 @@ function applyGridColor(){
 		});
 		$.ajax({
 	    type: "POST",
-	    url: "/dashboard/apply_color",
+	    url: "/palettes",
 	    data: {palettes_attributes: palettes}
 	  });
 	}else{
@@ -26,7 +26,7 @@ function refreshGrid(){
 	if($(".grid-selected").size()==0){
 		$.ajax({
       type: "get",
-      url: "/dashboard/refresh_grid"
+      url: "/palettes/refresh_grid"
     });
 	}
 }

@@ -1,10 +1,7 @@
-class DashboardController < ApplicationController
+class PalettesController < ApplicationController
   before_action :set_palettes, only: [:index, :refresh_grid]
 
-  def index
-  end
-
-  def apply_color
+  def create
   	@current_user.update(palette_params)
   end
 
